@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>To-Do List</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <div class="app">
+
+    <header class="header">
+      <div class="header-top">
+        <span class="logo-dot"></span>
+        <h1 class="app-title">tasks.</h1>
+      </div>
+      <p class="date" id="dateDisplay"></p>
+      <div class="stats">
+        <div class="stat-box">
+          <span class="stat-num" id="totalCount">0</span>
+          <span class="stat-label">total</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" id="doneCount">0</span>
+          <span class="stat-label">done</span>
+        </div>
+        <div class="stat-box">
+          <span class="stat-num" id="leftCount">0</span>
+          <span class="stat-label">left</span>
+        </div>
+      </div>
+    </header>
+
+    <div class="input-area">
+      <input
+        type="text"
+        id="taskInput"
+        class="task-input"
+        placeholder="add a new task..."
+        maxlength="80"
+        autocomplete="off"
+      />
+      <button class="add-btn" id="addBtn" aria-label="Add task">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round">
+          <line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/>
+        </svg>
+      </button>
+    </div>
+
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">all</button>
+      <button class="filter-btn" data-filter="active">active</button>
+      <button class="filter-btn" data-filter="completed">done</button>
+    </div>
+
+    <ul class="task-list" id="taskList">
+      <!-- tasks injected by JS -->
+    </ul>
+
+    <div class="empty-state" id="emptyState">
+      <span class="empty-icon">✦</span>
+      <p>no tasks here yet</p>
+    </div>
+
+    <div class="footer">
+      <button class="clear-btn" id="clearBtn">clear completed</button>
+    </div>
+
+  </div>
+
+  <script src="TodoList.js"></script>
+</body>
+</html>
