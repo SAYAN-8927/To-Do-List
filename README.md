@@ -9,7 +9,7 @@ A task manager built with vanilla HTML, CSS, and JavaScript.
 - Clear completed tasks
 
 ## Live Demo
-https://YOUR_USERNAME.github.io/todo-list-app
+https://sayan-8927.github.io/To-Do-List/
 
 ## Tech Stack
 - HTML
